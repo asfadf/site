@@ -201,6 +201,13 @@ header .header-content .header-content-inner a.btn {
 .section-heading {
   margin-top: 0;
 }
+.event-box {
+  display: block;
+  text-align: center;
+}
+.event-box h3 {
+  font-weight: 700;
+}
 a.service-box {
   display: block;
   text-decoration: none;
