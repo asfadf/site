@@ -56,6 +56,9 @@
                         <a class="page-scroll" href="#conhecanos">Conheça-nos</a>
                     </li>
                     <li>
+                        <a class="page-scroll" href="#proximos-eventos">Próximos Eventos</a>
+                    </li>
+                    <li>
                         <a class="page-scroll" href="#projetos">Nossos Projetos</a>
                     </li>
                     <li>
@@ -107,6 +110,71 @@
                     <p class="text-faded">Ficaremos felizes em recebê-lo em nossa Casa para que conheçam os nossos trabalhos.
                     Agradecemos a Deus pela oportunidade bendita de trabalhar na seara do Mestre Jesus. </p>
                     <a href="#" class="btn btn-default btn-xl" data-toggle="modal" data-target="#como-participar-modal">Saiba como participar!</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="proximos-eventos">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">Próximos eventos</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-offset-3 col-lg-3 event-box">
+                    <h3>Cinedebate Espírita</h3>
+                    <p>
+                        <strong>Data:</strong> 28 de agosto<br>
+                        <strong>Horário:</strong> 14h<br>
+                        <strong>Ingresso:</strong> R$ 20,00
+                    </p>
+                    <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+                    <form action="https://pagseguro.uol.com.br/checkout/v2/cart.html?action=add" method="post" onsubmit="PagSeguroLightbox(this); return false;">
+                    <!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+                    <input type="hidden" name="itemCode" value="A1658DBCF2F2543AA4B15F9BD4C02363" />
+                    <input type="hidden" name="iot" value="button" />
+                    <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-comprar-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+                    </form>
+                    <script type="text/javascript" src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"></script>
+                    <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+                </div>
+                <div class="col-lg-3 event-box">
+                    <h3>Jantar Dançante</h3>
+                    <p>
+                        <strong>Data:</strong> 23 de setembro<br>
+                        <strong>Horário:</strong> 20h<br>
+                        <strong>Ingresso:</strong> R$ 40,00
+                    </p>
+                    <!-- INICIO FORMULARIO BOTAO PAGSEGURO -->
+                    <form action="https://pagseguro.uol.com.br/checkout/v2/cart.html?action=add" method="post" onsubmit="PagSeguroLightbox(this); return false;">
+                    <!-- NÃO EDITE OS COMANDOS DAS LINHAS ABAIXO -->
+                    <input type="hidden" name="itemCode" value="3D8D8E28909010B884BABFB309EF7609" />
+                    <input type="hidden" name="iot" value="button" />
+                    <input type="image" src="https://stc.pagseguro.uol.com.br/public/img/botoes/pagamentos/209x48-comprar-assina.gif" name="submit" alt="Pague com PagSeguro - é rápido, grátis e seguro!" />
+                    </form>
+                    <script type="text/javascript" src="https://stc.pagseguro.uol.com.br/pagseguro/api/v2/checkout/pagseguro.lightbox.js"></script>
+                    <!-- FINAL FORMULARIO BOTAO PAGSEGURO -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="no-padding">
+        <div class="container-fluid">
+            <div class="row no-gutter">
+                <div class="col-lg-4 col-sm-6">
+                    <img src="img/portfolio/4.jpg" class="img-responsive" alt="">
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <img src="img/portfolio/5.jpg" class="img-responsive" alt="">
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <img src="img/portfolio/6.jpg" class="img-responsive" alt="">
                 </div>
             </div>
         </div>
@@ -169,7 +237,7 @@
         </div>
     </section>
 
-    <section class="no-padding" id="projetos2">
+    <section class="no-padding">
         <div class="container-fluid">
             <div class="row no-gutter">
                 <div class="col-lg-4 col-sm-6">
@@ -180,15 +248,6 @@
                 </div>
                 <div class="col-lg-4 col-sm-6">
                     <img src="img/portfolio/3.jpg" class="img-responsive" alt="">
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <img src="img/portfolio/4.jpg" class="img-responsive" alt="">
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <img src="img/portfolio/5.jpg" class="img-responsive" alt="">
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <img src="img/portfolio/6.jpg" class="img-responsive" alt="">
                 </div>
             </div>
         </div>
@@ -296,32 +355,36 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h4 class="modal-title" id="myModalLabel">Saiba como participar</h4>
+                    <h4 class="modal-title">Saiba como participar</h4>
                 </div>
                 <div class="modal-body">
                     <table class="table">
                         <thead>
                             <tr>
                                 <th>Projeto</th>
-                                <th>Dia da semana</th>
-                                <th>Horário</th>
+                                <th>Dias e Horários</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
                                 <td>Evangelização da Infância e Adultos</td>
-                                <td>Domingos alternados (ver calendário)</td>
-                                <td>8h-11h</td>
+                                <td>Domingos alternados (ver calendário) de 8h às 11h</td>
                             </tr>
                             <tr>
                                 <td>Evangelização da Juventude</td>
-                                <td>Sábados alternados (ver calendário)</td>
-                                <td>9h-12h</td>
+                                <td>Sábados alternados (ver calendário) de 9h às 12h</td>
                             </tr>
                             <tr>
                                 <td>ASFA Cultural</td>
-                                <td>Domingos alternados (ver calendário)</td>
-                                <td>10h-15h</td>
+                                <td>Domingos alternados (ver calendário) de 10h às 15h</td>
+                            </tr>
+                            <tr>
+                                <td>Luz e Paz na Rodoviária</td>
+                                <td>Quintas-feiras de 22h às 23:30h</td>
+                            </tr>
+                            <tr>
+                                <td>Apoio ao Aprendizado</td>
+                                <td>Quartas-feiras de 9:30h às 11h e Sextas-feiras de 13:30h às 16h</td>
                             </tr>
                         </tbody>
                     </table>
