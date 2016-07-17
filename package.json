@@ -1,0 +1,28 @@
+{
+  "name": "asfadf.github.io",
+  "version": "1.0.0",
+  "description": "Site da ASFA",
+  "main": "index.html",
+  "scripts": {
+    "build:sass": "sass --watch sass/creative.scss:css/creative.css",
+    "livereload": "livereloadx --port 2008 --static",
+    "dev": "npm run build:sass & npm run livereload"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asfadf/asfadf.github.io.git"
+  },
+  "keywords": [
+    "jesus",
+    "espiritismo",
+    "caridade",
+    "evangelização"
+  ],
+  "author": "Arthur Nobrega",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asfadf/asfadf.github.io/issues"
+  },
+  "homepage": "https://github.com/asfadf/asfadf.github.io#readme",
+  "dependencies": {}
+}

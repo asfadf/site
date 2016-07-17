@@ -1,7 +1,5 @@
-// out: ../css/creative.css
-
-@import "variables.less";
-@import "mixins.less";
+@import "variables";
+@import "mixins";
 
 // Global Components
 html,
@@ -11,11 +9,12 @@ body {
 }
 
 body {
-    .serif-font;
+    font-family: $serif-font;
+    webkit-tap-highlight-color: $theme-dark;
 }
 
 hr {
-    border-color: @theme-primary;
+    border-color: $theme-primary;
     border-width: 3px;
     max-width: 50px;
 }
@@ -25,11 +24,11 @@ hr.light {
 }
 
 a {
-    .transition-all;
-    color: @theme-primary;
+    @include transition-all;
+    color: $theme-primary;
     &:hover,
     &:focus {
-        color: darken(@theme-primary, 10%);
+        color: darken($theme-primary, 10%);
     }
 }
 
@@ -39,7 +38,7 @@ h3,
 h4,
 h5,
 h6 {
-    .sans-serif-font;
+    font-family: $sans-serif-font;
 }
 
 p {
@@ -49,20 +48,20 @@ p {
 }
 
 .bg-primary {
-    background-color: @theme-primary;
+    background-color: $theme-primary;
 }
 
 //.bg-secondary {
-//    background-color: @theme-secondary;
+//    background-color: $theme-secondary;
 //}
 
 .bg-dark {
-    background-color: @theme-dark;
+    background-color: $theme-dark;
     color: white;
 }
 
 .text-faded {
-    color: fade(white, 70%);
+    color: fade-out(white, 0.3);
 }
 
 section {
@@ -80,18 +79,18 @@ aside {
 // Navigation
 
 .navbar-default {
-    border-color: fade(@theme-dark, 5%);
-    .sans-serif-font;
-    .transition-all;
+    border-color: fade-out($theme-dark, 0.05);
+    font-family: $sans-serif-font;
+    @include transition-all;
     .navbar-header .navbar-brand {
         font-size: 13px;
-        color: @theme-primary;
-        .sans-serif-font;
+        color: $theme-primary;
+        font-family: $sans-serif-font;
         font-weight: 700;
         text-transform: uppercase;
         &:hover,
         &:focus {
-            color: darken(@theme-primary, 10%);
+            color: darken($theme-primary, 10%);
         }
     }
     .nav {
@@ -101,15 +100,15 @@ aside {
                 text-transform: uppercase;
                 font-weight: 700;
                 font-size: 13px;
-                color: @theme-dark;
+                color: $theme-dark;
                 &:hover {
-                    color: @theme-primary;
+                    color: $theme-primary;
                 }
             }
             &.active {
                 > a,
                 > a:focus {
-                    color: @theme-primary !important;
+                    color: $theme-primary !important;
                     background-color: transparent;
                     &:hover {
                         background-color: transparent;
@@ -120,10 +119,10 @@ aside {
     }
     @media (min-width: 768px) {
         background-color: transparent;
-        border-color: fade(white, 30%);
+        border-color: fade-out(white, 0.7);
         .navbar-header .navbar-brand {
             font-size: 14px;
-            color: fade(white, 70%);
+            color: fade-out(white, 0.3);
             &:hover,
             &:focus {
                 color: white;
@@ -131,27 +130,27 @@ aside {
         }
         .nav > li > a,
         .nav > li > a:focus {
-            color: fade(white, 70%);
+            color: fade-out(white, 0.3);
             &:hover {
                 color: white;
             }
         }
         &.affix {
             background-color: white;
-            border-color: fade(@theme-dark, 5%);
+            border-color: fade-out($theme-dark, 0.95);
             .navbar-header .navbar-brand {
-                color: @theme-primary;
+                color: $theme-primary;
                 font-size: 14px;
                 &:hover,
                 &:focus {
-                    color: darken(@theme-primary, 10%);
+                    color: darken($theme-primary, 10%);
                 }
             }
             .nav > li > a,
             .nav > li > a:focus {
-                color: @theme-dark;
+                color: $theme-dark;
                 &:hover {
-                    color: @theme-primary;
+                    color: $theme-primary;
                 }
             }
         }
@@ -164,7 +163,7 @@ header {
     position: relative;
     width: 100%;
     min-height: auto;
-    .background-cover;
+    @include background-cover;
     background-position: center;
     background-image: url('../img/dialivro-fundo.jpg');
     text-align: center;
@@ -186,7 +185,7 @@ header {
             }
             p {
                 font-weight: 300;
-                color: fade(white, 70%);
+                color: fade-out(white, 0.3);
                 font-size: 16px;
                 margin-bottom: 50px;
             }
@@ -262,13 +261,13 @@ a.service-box {
         color: white;
         opacity: 0;
         display: block;
-        background: fade(@theme-primary, 90%);
+        background: fade-out($theme-primary, 0.9);
         position: absolute;
         bottom: 0;
         text-align: center;
         width: 100%;
         height: 100%;
-        .transition-all;
+        @include transition-all;
         .portfolio-box-caption-content {
             width: 100%;
             text-align: center;
@@ -277,7 +276,7 @@ a.service-box {
             transform: translateY(-50%);
             .project-category,
             .project-name {
-                .sans-serif-font;
+                font-family: $sans-serif-font;
                 padding: 0 15px;
             }
             .project-category {
@@ -317,7 +316,7 @@ a.service-box {
 
 // Bootstrap Overrides
 .text-primary {
-    color: @theme-primary;
+    color: $theme-primary;
 }
 
 .no-gutter > [class*='col-'] {
@@ -327,15 +326,15 @@ a.service-box {
 
 // Button Styles
 .btn-default {
-    .button-variant(@theme-dark;white;white);
+    @include button-variant($theme-dark, white, white);
 }
 
 .btn-primary {
-    .button-variant(white;@theme-primary;@theme-primary);
+    @include button-variant(white, $theme-primary, $theme-primary);
 }
 
 .btn {
-    .sans-serif-font;
+    font-family: $sans-serif-font;
     border: none;
     border-radius: 300px;
     font-weight: 700;
@@ -351,13 +350,13 @@ a.service-box {
 ::-moz-selection {
     color: white;
     text-shadow: none;
-    background: @theme-dark;
+    background: $theme-dark;
 }
 
 ::selection {
     color: white;
     text-shadow: none;
-    background: @theme-dark;
+    background: $theme-dark;
 }
 
 img::selection {
@@ -370,6 +369,6 @@ img::-moz-selection {
     background: transparent;
 }
 
-body {
-    webkit-tap-highlight-color: @theme-dark;
+section#contato {
+    padding-bottom: 0;
 }
