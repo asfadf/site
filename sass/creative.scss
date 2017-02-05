@@ -1,12 +1,12 @@
+@import "variables";
+@import "mixins";
+
 @import "../bower_components/bootstrap-sass/assets/stylesheets/_bootstrap";
 
 $fa-font-path: "../bower_components/font-awesome/fonts";
 @import "../bower_components/font-awesome/scss/font-awesome";
 
 @import "../bower_components/animate.css/animate.css";
-
-@import "variables";
-@import "mixins";
 
 // Global Components
 html,
@@ -16,12 +16,12 @@ body {
 }
 
 body {
-    font-family: $serif-font;
-    webkit-tap-highlight-color: $theme-dark;
+    font-family: $font-family-serif;
+    webkit-tap-highlight-color: $gray-darker;
 }
 
 hr {
-    border-color: $theme-primary;
+    border-color: $brand-primary;
     border-width: 3px;
     max-width: 50px;
 }
@@ -30,12 +30,16 @@ hr.light {
     border-color: white;
 }
 
+hr.dark {
+    border-color: $gray-dark;
+}
+
 a {
     @include transition-all;
-    color: $theme-primary;
+    color: $brand-primary;
     &:hover,
     &:focus {
-        color: darken($theme-primary, 10%);
+        color: darken($brand-primary, 10%);
     }
 }
 
@@ -45,7 +49,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $sans-serif-font;
+    font-family: $font-family-sans-serif;
 }
 
 p {
@@ -55,7 +59,7 @@ p {
 }
 
 .bg-primary {
-    background-color: $theme-primary;
+    background-color: $brand-primary;
 }
 
 //.bg-secondary {
@@ -63,7 +67,7 @@ p {
 //}
 
 .bg-dark {
-    background-color: $theme-dark;
+    background-color: $gray-darker;
     color: white;
 }
 
@@ -86,18 +90,18 @@ aside {
 // Navigation
 
 .navbar-default {
-    border-color: fade-out($theme-dark, 0.05);
-    font-family: $sans-serif-font;
+    border-color: fade-out($gray-darker, 0.05);
+    font-family: $font-family-sans-serif;
     @include transition-all;
     .navbar-header .navbar-brand {
         font-size: 13px;
-        color: $theme-primary;
-        font-family: $sans-serif-font;
+        color: $brand-primary;
+        font-family: $font-family-sans-serif;
         font-weight: 700;
         text-transform: uppercase;
         &:hover,
         &:focus {
-            color: darken($theme-primary, 10%);
+            color: darken($brand-primary, 10%);
         }
     }
     .nav {
@@ -107,15 +111,15 @@ aside {
                 text-transform: uppercase;
                 font-weight: 700;
                 font-size: 13px;
-                color: $theme-dark;
+                color: $gray-darker;
                 &:hover {
-                    color: $theme-primary;
+                    color: $brand-primary;
                 }
             }
             &.active {
                 > a,
                 > a:focus {
-                    color: $theme-primary !important;
+                    color: $brand-primary !important;
                     background-color: transparent;
                     &:hover {
                         background-color: transparent;
@@ -144,20 +148,20 @@ aside {
         }
         &.affix {
             background-color: white;
-            border-color: fade-out($theme-dark, 0.95);
+            border-color: fade-out($gray-darker, 0.95);
             .navbar-header .navbar-brand {
-                color: $theme-primary;
+                color: $brand-primary;
                 font-size: 14px;
                 &:hover,
                 &:focus {
-                    color: darken($theme-primary, 10%);
+                    color: darken($brand-primary, 10%);
                 }
             }
             .nav > li > a,
             .nav > li > a:focus {
-                color: $theme-dark;
+                color: $gray-darker;
                 &:hover {
-                    color: $theme-primary;
+                    color: $brand-primary;
                 }
             }
         }
@@ -268,7 +272,7 @@ a.service-box {
         color: white;
         opacity: 0;
         display: block;
-        background: fade-out($theme-primary, 0.9);
+        background: fade-out($brand-primary, 0.9);
         position: absolute;
         bottom: 0;
         text-align: center;
@@ -283,7 +287,7 @@ a.service-box {
             transform: translateY(-50%);
             .project-category,
             .project-name {
-                font-family: $sans-serif-font;
+                font-family: $font-family-sans-serif;
                 padding: 0 15px;
             }
             .project-category {
@@ -323,7 +327,7 @@ a.service-box {
 
 // Bootstrap Overrides
 .text-primary {
-    color: $theme-primary;
+    color: $brand-primary;
 }
 
 .no-gutter > [class*='col-'] {
@@ -333,15 +337,15 @@ a.service-box {
 
 // Button Styles
 .btn-default {
-    @include button-variant($theme-dark, white, white);
+    @include button-variant($gray-darker, white, white);
 }
 
 .btn-primary {
-    @include button-variant(white, $theme-primary, $theme-primary);
+    @include button-variant(white, $brand-primary, $brand-primary);
 }
 
 .btn {
-    font-family: $sans-serif-font;
+    font-family: $font-family-sans-serif;
     border: none;
     border-radius: 300px;
     font-weight: 700;
@@ -357,13 +361,13 @@ a.service-box {
 ::-moz-selection {
     color: white;
     text-shadow: none;
-    background: $theme-dark;
+    background: $gray-darker;
 }
 
 ::selection {
     color: white;
     text-shadow: none;
-    background: $theme-dark;
+    background: $gray-darker;
 }
 
 img::selection {
@@ -378,4 +382,8 @@ img::-moz-selection {
 
 section#contato {
     padding-bottom: 0;
+}
+
+.bg-info {
+    background-color: $brand-info;
 }
