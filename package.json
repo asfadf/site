@@ -4,7 +4,7 @@
   "description": "Site da ASFA",
   "main": "index.html",
   "scripts": {
-    "build:sass": "sass --watch sass/creative.scss:css/creative.css",
+    "build:sass": "node-sass --watch --output css --output-style compressed sass/creative.scss css/creative.css",
     "livereload": "livereloadx --port 2008 --static",
     "dev": "npm run build:sass & npm run livereload"
   },
@@ -24,5 +24,9 @@
     "url": "https://github.com/asfadf/asfadf.github.io/issues"
   },
   "homepage": "https://github.com/asfadf/asfadf.github.io#readme",
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {
+    "livereloadx": "0.3.10",
+    "node-sass": "4.8.3"
+  }
 }
