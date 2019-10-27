@@ -1,0 +1,8 @@
+# These rules will change if you change your site’s custom domains or HTTPS settings
+
+# Redirect domain aliases to primary domain
+https://asfa.org.br/* https://asfadf.org.br/:splat 301!
+https://www.asfa.org.br/* https://asfadf.org.br/:splat 301!
+
+# Optional: Redirect default Netlify subdomain to primary domain
+https://loving-jennings-0512d3.netlify.com/* https://asfadf.org.br/:splat 301!
